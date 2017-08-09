@@ -3,7 +3,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @model IEnumerable<WickedBanana.Models.Item>
-<h2>Products</h2>
+<h2>Items</h2>
 
 <main class="cards">
     @foreach (var Item in Model)
@@ -11,7 +11,11 @@
         <article class="card">
             <img src=@Html.DisplayFor(image => Item.Image) alt="Sample photo">
             <div class="text">
-                <h3>@Html.DisplayFor(name => Item.Name)</h3>
+                <h3>Name: @Html.DisplayFor(name => Item.Name)</h3>
+                <h3>Type: @Html.DisplayFor(type => Item.Type)</h3>
+                <h3>Attack Damage: @Html.DisplayFor(attack => Item.Attack)</h3>
+                <h3>Defense: @Html.DisplayFor(defense => Item.Defense)</h3>
+
                 <p>@Html.ActionLink("Delete", "Delete", new { id = Item.ItemId })</p>
                 <p>@Html.ActionLink("Edit", "Edit", new { id = Item.ItemId })</p>
        

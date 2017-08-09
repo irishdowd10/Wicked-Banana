@@ -1,7 +1,7 @@
-﻿@model WickedBanana.Models.Item
+﻿@model WickedBanana.Models.Foe
 
 @{
-    ViewData["Title"] = "Create A New Banana";
+    ViewData["Title"] = "Create A New Enemy";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <h2>Create</h2>
@@ -12,14 +12,11 @@
     @Html.LabelFor(model => model.Name)
     @Html.TextBoxFor(model => model.Name)
 
-    @Html.LabelFor(model => model.Type)
-    @Html.TextBoxFor(model => model.Type)
+    @Html.LabelFor(model => model.HitPoints)
+    @Html.TextBoxFor(model => model.HitPoints)
 
-    @Html.LabelFor(model => model.Attack)
-    @Html.TextBoxFor(model => model.Attack)
-
-    @Html.LabelFor(model => model.Defense)
-    @Html.TextBoxFor(model => model.Defense)
+    @Html.LabelFor(model => model.AttackDamage)
+    @Html.TextBoxFor(model => model.AttackDamage)
 
     @Html.LabelFor(model => model.Image)
     @Html.TextBoxFor(model => model.Image)

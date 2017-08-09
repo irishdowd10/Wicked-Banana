@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "All Enemies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<WickedBanana.Models.Foe>
+<h2>Foes</h2>
+
+<main class="cards">
+    @foreach (var Foe in Model)
+    {
+        <article class="card">
+            <img src=@Html.DisplayFor(image => Foe.Image) alt="Sample photo">
+            <div class="text">
+                <h3>Name: @Html.DisplayFor(name => Foe.Name)</h3>
+                <h3>Health: @Html.DisplayFor(type => Foe.HitPoints) hit points</h3>
+                <h3>Attack Damage: @Html.DisplayFor(attack => Foe.AttackDamage)</h3>
+                <p>@Html.ActionLink("Delete", "Delete", new { id = Foe.FoeId })</p>
+                <p>@Html.ActionLink("Edit", "Edit", new { id = Foe.FoeId })</p>
+       
+            </div>
+        </article>
+    }
+</main>
+@Html.ActionLink("Create New", "Create")

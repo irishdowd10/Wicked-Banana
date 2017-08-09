@@ -1,0 +1,29 @@
+﻿@model WickedBanana.Models.Foe
+@{
+    ViewData["Title"] = "Edit " + Html.DisplayFor(model => model.Name);
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+<hr />
+<h4>Edit this Enemy: @Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.FoeId)
+
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+    @Html.LabelFor(model => model.HitPoints)
+    @Html.EditorFor(model => model.HitPoints)
+    @Html.LabelFor(model => model.AttackDamage)
+    @Html.EditorFor(model => model.AttackDamage)
+    @Html.LabelFor(model => model.Image)
+    @Html.EditorFor(model => model.Image)
+
+
+
+
+    <input type="submit" value="Save" />
+}
+<p>@Html.ActionLink("Back to list", "Index")</p>
