@@ -1,0 +1,24 @@
+﻿@model WickedBanana.Models.Banana
+
+@{
+    ViewData["Title"] = "Create A New Banana";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Create</h2>
+<hr />
+<h4>Add a new Banana</h4>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
+
+    <input type="submit" value="Create" />
+}
+<h2>Your Banana's Info</h2>
+
+<p>name: @ViewBag.addedBananaName</p>
+<p>Attack Damage: @ViewBag.addedBananaAttackDamage</p>
+<p>Length: @ViewBag.addedBananaLength </p>
+<img src= @ViewBag.addedBananaImage alt="banananannana" style="height:300px"/>
+
+<p>@Html.ActionLink("Start Game", "Start", "Game")</p>
