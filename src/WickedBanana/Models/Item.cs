@@ -17,8 +17,7 @@ namespace WickedBanana.Models
         public int Attack { get; set; }
         public int Defense { get; set; }
         public string Image { get; set; }
-        public int BananaId { get; set; }
-        public virtual Banana Banana { get; set; }
-        public virtual Foe Foe { get; set; }
+        public virtual ICollection<BananaItem> BananaItems { get; set; }
+      
     }
 }

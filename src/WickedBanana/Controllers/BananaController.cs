@@ -11,7 +11,7 @@ namespace WickedBanana.Controllers
     public class BananaController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-        //Create your babana
+        //Create your banana
         [Authorize]
         public IActionResult Create()
         {

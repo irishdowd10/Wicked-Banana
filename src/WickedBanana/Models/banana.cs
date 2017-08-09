@@ -16,7 +16,7 @@ namespace WickedBanana.Models
         public int AttackDamage { get; set; }
         public int Length { get; set; }
         public string Image { get; set; }
-        public virtual ICollection<Item> Item { get; set; }
+        public virtual ICollection<BananaItem> BananaItems { get; set; }
         public Banana()
         {
             this.AttackDamage = 100;

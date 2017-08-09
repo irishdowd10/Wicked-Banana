@@ -1,4 +1,4 @@
-﻿@model WickedBanana.Models.Banana
+﻿@model WickedBanana.Models.Item
 
 @{
     ViewData["Title"] = "Create A New Banana";
@@ -6,18 +6,31 @@
 }
 <h2>Create</h2>
 <hr />
-<h4>Add a new Banana</h4>
+<h4>Add a new Item</h4>
 @using (Html.BeginForm())
 {
     @Html.LabelFor(model => model.Name)
     @Html.TextBoxFor(model => model.Name)
+
+    @Html.LabelFor(model => model.Type)
+    @Html.TextBoxFor(model => model.Type)
+
+    @Html.LabelFor(model => model.Attack)
+    @Html.TextBoxFor(model => model.Attack)
+
+    @Html.LabelFor(model => model.Defense)
+    @Html.TextBoxFor(model => model.Defense)
+
+    @Html.LabelFor(model => model.Image)
+    @Html.TextBoxFor(model => model.Image)
+
 
     <input type="submit" value="Create" />
 }
 <h2>Your Banana's Info</h2>
 
 <p>name: @ViewBag.addedBananaName</p>
-<p>Attack Damage: @ViewBag.addedBananaAttackDamage</p>
+<p>De Damage: @ViewBag.addedBananaAttackDamage</p>
 <p>Length: @ViewBag.addedBananaLength inches</p>
 <img src= @ViewBag.addedBananaImage alt="banananannana" style="height:300px"/>
 
